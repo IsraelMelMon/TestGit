@@ -87,11 +87,7 @@ pipe_LinR = Pipeline([('scl', MinMaxScaler()),
 
 pipe_lr = Pipeline([('scl', MinMaxScaler()),
 			('clf', LogisticRegression(random_state=42))])
-"""
-pipe_lr_pca = Pipeline([('scl', MinMaxScaler()),
-			('pca', PCA(n_components=2)),
-			('clf', LogisticRegression(random_state=42))])
-"""
+
 pipe_rf = Pipeline([('scl', StandardScaler()),
 			('clf', RandomForestClassifier(random_state=42))])
 """
