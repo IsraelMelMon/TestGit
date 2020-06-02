@@ -84,11 +84,7 @@ HNG = sorted(zip(map(lambda x: round(x, 4), rf.feature_importances_), z_train), 
 
 pipe_LinR = Pipeline([('scl', MinMaxScaler()),
 			('clf', LinearRegression())])
-"""
-pipe_linR_pca = Pipeline([('scl', MinMaxScaler()),
-			('pca', PCA(n_components=2)),
-			('clf', LogisticRegression(random_state=42))])
-"""
+
 pipe_lr = Pipeline([('scl', MinMaxScaler()),
 			('clf', LogisticRegression(random_state=42))])
 """
@@ -145,6 +141,8 @@ gs_lr = GridSearchCV(estimator=pipe_lr,
 			param_grid=grid_params_lr,
 			scoring=sc,
 			cv=11) 
+# test commentary
+
 
 #gs_LinR = GridSearchCV(estimator=pipe_LinR,
 #			param_grid=grid_params_LinR,
